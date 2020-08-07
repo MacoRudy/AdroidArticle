@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.InsertArticleActivity">
+
+
+    <EditText
+        android:id="@+id/nom_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/prix_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prix"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/nom_article" />
+
+    <EditText
+        android:id="@+id/description_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        app:layout_constraintTop_toBottomOf="@+id/prix_article" />
+
+    <EditText
+        android:id="@+id/url_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Url"
+        app:layout_constraintTop_toBottomOf="@+id/note_article" />
+
+    <CheckBox
+        android:id="@+id/acquis_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Acquis ?"
+        app:layout_constraintTop_toBottomOf="@+id/url_article" />
+
+
+    <RatingBar
+        android:id="@+id/note_article"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_article" />
+
+    <Button
+        android:id="@+id/btn_ajout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:onClick="onClickAjout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_photo"
+        android:layout_width="96dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="24dp"
+        android:onClick="onClickPhoto"
+        android:text="Photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acquis_article" />
+
+    <ImageView
+        android:id="@+id/img_photo"
+        android:layout_width="233dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_photo"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_acquis"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="Acheté"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        android:onClick="onClickAcquis"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
